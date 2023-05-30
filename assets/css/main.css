@@ -456,11 +456,11 @@ a:hover
     display: inline-block;
     overflow: hidden;
 
-    width: 33.3%;
+    width: 50%;
     margin: 0;
     padding: 0;
 
-    border: 2.5rem solid #fff;
+    border: 2.5rem solid #fff4f4;
     background: #111;
 }
 
@@ -492,54 +492,51 @@ a:hover
 }
 
 
-/**
 
-.portfolio .item i
+.portfolio .itemsmall
 {
-    font-size: 2.5rem;
-    line-height: 6rem;
+    position: relative;
 
-    position: absolute;
-    z-index: 10;
-    top: 0;
-    right: 0;
-    right: 0;
+    display: inline-block;
+    overflow: hidden;
 
-    width: 6rem;
-    height: 6rem;
+    width: 33.3%;
+    margin: 0;
     padding: 0;
 
-    -webkit-transition: .1s ease;
-         -o-transition: .1s ease;
-            transition: .1s ease;
-    text-align: center;
-
-    opacity: 0;
-    color: #fff;
-    border-radius: 100%;
+    border: 2.5rem solid  #fff4f4;
+    background: #111;
 }
 
-.portfolio .item:hover i
+.portfolio .itemsmall:before
 {
-    opacity: 1;
-}
+    display: block;
 
-.portfolio .item i:after
-{
-    position: absolute;
-    z-index: -2;
-    top: 0;
-    right: 0;
+    padding-top: 70%;
 
     content: '';
-    -webkit-transition: .1s ease;
-         -o-transition: .1s ease;
-            transition: .1s ease;
-
-    border-width: 0 10rem 10rem 0;
-    border-style: solid;
-    border-color: transparent #d80247 transparent transparent;
 }
+
+.portfolio .itemsmall:last-child
+{
+    margin-bottom: 0;
+}
+
+.portfolio .itemsmall .item-cover
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-position: center;
+    background-size: cover;
+}
+
+
+/** 5. feather
 
 .featherlight .featherlight-content
 {
@@ -634,6 +631,9 @@ a:hover
     display: none !important;
 }
 *******************************************************************/
+
+
+
 @media (max-width:1200px)
 {
     .portfolio .item
@@ -788,6 +788,25 @@ a:hover
     font-size: 2.4rem;
 
     margin-top: 2.8em;
+}
+
+.about .contacted
+{
+    font-size: 2.4rem;
+
+    margin-bottom: -2.8em;
+}
+
+.about .contacted span
+{
+    font-size: inherit;
+
+    margin-left: .8em;
+    padding: 0.5em 1em;
+
+    color: #fff;
+    border-radius: 100px;
+    background: #d80f49;
 }
 
 .about .contact span
